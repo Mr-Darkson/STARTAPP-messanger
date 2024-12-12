@@ -171,9 +171,9 @@ image:https://github.com/Mr-Darkson/STARTAPP-messanger/blob/main/docs/api-scheme
 |*Должность* |*Кол-во*
 |_Project Manager_ |_1_
 |_Architects_ |_1_
-|_Developers_ |_5_
+|_Developers_ |_4_
 |_QA Engineers_ |_6_
-|_UX/UI Designers_ |_4_
+|_UX/UI Designers_ |_2_
 |_Business Analysts_ |_2_
 |===
 === *Платформа для размещения:*
