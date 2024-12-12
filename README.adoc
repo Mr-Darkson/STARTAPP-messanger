@@ -76,77 +76,9 @@
 
 === *Архитектура мессенджера:*
 Ниже *приведена архитектура* мессенджера "Придумать название":
-[source,plantuml]
-----
-@startuml
 
-!define RECTANGLE class
+image:https://github.com/Mr-Darkson/STARTAPP-messanger/blob/main/docs/api-scheme.png[]
 
-RECTANGLE UI {
-  + Пользовательский интерфейс (Web)
-}
-
-RECTANGLE API_Gateway {
-  + Обработка запросов
-  + Аутентификация и авторизация
-  + Безопасность (Шифрование, Защита от атак)
-}
-
-RECTANGLE User_Service {
-  + Управление профилями пользователей
-  + Контакты и настройки
-}
-
-RECTANGLE Message_Service {
-  + Отправка/получение сообщений
-  + Хранение сообщений
-}
-
-RECTANGLE Chat_Service {
-  + Управление чатами
-}
-
-RECTANGLE Notification_Service {
-  + Уведомления (Push, Email)
-}
-
-RECTANGLE File_Service {
-  + Загрузка/скачивание файлов
-}
-
-RECTANGLE Search_Service {
-  + Поиск сообщений
-  + Поиск пользователей и чатов
-}
-
-RECTANGLE Analytics_Service {
-  + Статистика активности пользователей
-  + Генерация отчётов
-}
-
-RECTANGLE DB {
-  + Базы данных для каждой службы
-  + SQL/NoSQL
-}
-
-UI --> API_Gateway : Отправка запросов
-API_Gateway --> User_Service : Получение данных о пользователе
-API_Gateway --> Message_Service : Отправка/Получение сообщений
-API_Gateway --> Chat_Service : Управление чатами
-API_Gateway --> Notification_Service : Отправка уведомлений
-API_Gateway --> File_Service : Загрузка/Скачивание файлов
-API_Gateway --> Search_Service : Поиск данных
-API_Gateway --> Analytics_Service : Получение аналитических данных
-
-User_Service --> DB : Сохранение данных о пользователе
-Message_Service --> DB : Хранение сообщений
-Chat_Service --> DB : Хранение чатов
-File_Service --> DB : Хранение файлов
-Search_Service --> DB : Индексация данных
-Analytics_Service --> DB : Сбор аналитических данных
-
-@enduml
-----
 
 === *План реализации функциональности:*
 
